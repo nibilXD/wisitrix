@@ -1,0 +1,429 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: #2f2f2f2f; /* Light background for a premium feel */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    background: #222; /* Darker header for premium look */
+    color: white;
+    padding: 20px 40px; /* Increased padding for a more elegant look */
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 36px; /* Larger logo */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    max-width: 100%; /* Ensure logo fits within its container */
+    height: auto;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-toggle:hover {
+    color: #4CAF50; /* Change color on hover */
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    display: inline-block;
+    border-radius: 30px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ddd;
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+nav ul li a:active {
+    transform: scale(0.95); /* Scale down when pressed */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.active {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+#hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 160px 20px; /* Increased padding for a premium feel */
+    color: white;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px); /* Corrected property */
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 3em; /* Adjusted size */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+#hero p {
+    margin: 20px 0;
+    font-size: 2em; /* Larger paragraph text */
+}
+
+.cta-button {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    font-size: 1.2em;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+    transform: scale(0.95); /* Scale down when pressed */
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#services .service {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 320px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#services .service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 4em; /* Larger icons */
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+#why-choose-us {
+    background: #4CAF50;
+    color: white;
+    padding: 60px 20px;
+}
+
+#why-choose-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#why-choose-us ul li {
+    margin: 15px 0;
+}
+
+#about {
+    background: #fff;
+    padding: 60px 20px;
+    color: #333;
+}
+
+#about p {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#contact {
+    background: #fff;
+    padding: 60px 20px;
+    color: #333;
+    position: relative;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact-form span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.contact-form button:active {
+    transform: scale(0.95); /* Scale down when pressed */
+}
+
+.contact-details {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media p {
+    margin-right: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.social-icon {
+    font-size: 2.5em; /* Adjusted size for better visibility */
+    color: #fff; /* Default color */
+    transition: transform 0.3s, color 0.3s;
+    text-decoration: none; /* Ensure no underline for icons */
+}
+
+.social-icon.instagram {
+    color: #C13584; /* Instagram color */
+}
+
+.social-icon.youtube {
+    color: #FF0000; /* YouTube color */
+}
+
+.social-icon.x {
+    color: #000; /* X (formerly Twitter) color */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+footer a:hover {
+    color: #45a049; /* Change color on hover */
+}
+.contact-details {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffffff, #f7f7f7); /* Soft gradient background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: left;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+.contact-details h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333; /* Slightly darker color for the heading */
+}
+
+.contact-details p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.contact-details a {
+    color: #4CAF50; /* Accent color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-details a:hover {
+    color: #45a049; /* Darker shade on hover */
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+.contact-form {
+    max-width: 700px; /* Increased max-width for a larger form */
+    margin: 0 auto;
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 12px; /* Rounded corners for a softer look */
+    background: #ffffff; /* Clean white background */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 15px; /* Increased space between labels */
+    font-size: 1.1em; /* Slightly larger font for labels */
+    color: #333; /* Darker color for readability */
+}
+
+.contact-form span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 24px); /* Adjusted width for padding and border */
+    padding: 14px; /* Increased padding for better input area */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em; /* Larger font size for readability */
+    margin-bottom: 20px; /* Increased space between form elements */
+}
+
+.contact-form textarea {
+    min-height: 150px; /* Increased height for better text area */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+    background: #4CAF50;
+    color: white;
+    padding: 20px 90px; /* Larger button padding */
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 1.1em; /* Slightly larger font size for the button */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button:active {
+    transform: scale(1); /* Scale down when pressed */
+}
