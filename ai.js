@@ -50,15 +50,16 @@ const responses = {
 // Track the state of the conversation
 let currentCategory = null;
 
-// Start the chat when the button is clicked
+// Automatically start the chat as soon as the page loads
+window.onload = function() {
+    startChat();  // Automatically start chat when the page loads
+}
+
+// Start the chat
 function startChat() {
     const chatBox = document.getElementById('chatBox');
-    const startButton = document.querySelector('.start-button'); // Get the Start button
 
-    // Hide the start button
-    startButton.style.display = 'none';
-
-    // Begin the chat
+    // Start the chat immediately
     chatBox.innerHTML = `<div class="bot-message">Hello! How can I assist you today?</div>`;
     chatBox.innerHTML += `<div class="bot-message">Please select a category to begin.</div>`;
     chatBox.innerHTML += `<div class="bot-message typing">...</div>`;
@@ -140,13 +141,11 @@ function showAnswer(category, question) {
 
 // Clear the chat and reset
 function clearChat() {
-    const chatBox = document.getElementById('chatBox');
-    chatBox.innerHTML = '';
-    currentCategory = null;
+    location.reload(); // This will reload the page and restart the chat
 }
 
 // End the chat session and redirect to i.html
+// End the chat session and redirect to index.html
 function endChat() {
-    clearChat();
-    window.location.href = "index.html";  // Redirects to i.html when End Chat is pressed
+    window.location.href = "index.html";  // Redirects to index.html when End Chat is pressed
 }
