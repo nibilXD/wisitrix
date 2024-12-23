@@ -345,6 +345,52 @@ footer a:hover {
     text-align: left;
     font-family: 'Roboto', sans-serif; /* Modern font */
 }
+/* Styling for the floating tool button */
+.floating-tool-button {
+    position: fixed;
+    bottom: 90px; /* Place this above the start chat button */
+    right: 30px;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    width: 50px; /* Square shape */
+    height: 50px;
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 999;
+    text-align: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Styling for the AI icon */
+.floating-tool-button .tool-icon {
+    width: 24px; /* Icon size */
+    height: 24px;
+}
+
+/* Styling for the text */
+.floating-tool-button span {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* Hover effect - Button lift animation */
+.floating-tool-button:hover {
+    background-color: #555; /* Darker shade of black when hovered */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+
+/* Hover effect - Button lift animation */
+.floating-tool-button:hover {
+    background-color: #555; /* Darker shade of black when hovered */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
 
 .contact-details h2 {
     margin-top: 0;
